@@ -1,0 +1,37 @@
+# Task 1: Print numbers 1-10 using while and for loops
+
+# while loop
+print("while loop 1 - 10")
+x = 1
+while x <= 10:
+    print(x, end= ' ')
+    x += 1
+
+# for loop
+print("\nfor loop 1 - 10")
+for y in range (1,11):
+    print(y, end= ' ')
+
+
+# Task 2: Write a loop that prints out all the numbers 0 - 50 that are divisible by 3, 6, or 9.
+
+print('\nFinding numbers 0 - 50 that are divisible by 3, 6, or 9')
+for y in range (0,50):
+    if y % 3 == 0 or y % 6 == 0 or y % 9 == 0:
+        print(y, end=' ')
+    y += 1
+
+# Task 3: Divide 12 by 2 repeatedly until .0001
+original = 12
+n = 1  # starting from 1 so we cade can divide by (n-1)=0 properly
+change = original
+
+while change >= 0.0001:
+    new_value = original * (1 / (2 ** n))
+    prev = original * (1 / (2 ** (n-1)))
+    change = abs(new_value - prev)
+    n += 1
+
+print(f"\nTotal times 12 was divided by 2 to get a difference of 0.0001 was {n} times.")
+
+
